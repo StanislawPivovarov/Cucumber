@@ -1,0 +1,2499 @@
+<html lang="en" class="js flexbox flexboxlegacy canvas canvastext postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Личный кабинет</title>
+    
+
+    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/simple-line-icons.css">
+    <link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/font-awesome.min.css">
+    <link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/sprite.css">
+    
+    <link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/personal/sharing/header.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/student-menu.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/item-hider.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/footer.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/select/cs-select.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/slick/slick.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/personal/sharing/mmenu/jquery.mmenu.all.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/fancybox/jquery.fancybox.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/scroll/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/intranet/my-materials/styles/select2.min.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/personal/personal/styles/styles.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/js_aboutme/add_style.css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/bvi/css/bvi.min.css" type="text/css">
+<link rel="stylesheet" href="https://shelly.kpfu.ru/pdf/supersite/student/sharing/styles111.css">
+ <script src="https://shelly.kpfu.ru/pdf/supersite/bvi/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/innerpage/js/jquery-migrate-1.3.0.min.js"></script>
+           <link type="text/css" href="https://shelly.kpfu.ru/pdf/jQuery/css/ui.css" rel="stylesheet">
+<script type="text/javascript" src="https://shelly.kpfu.ru/pdf/jQuery/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="https://shelly.kpfu.ru/pdf/jQuery/js/jquery.ui.datepicker-ru-1251.js"></script>
+<script>$(document).ready(function(){
+                $(".datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '-100:+100'
+                                            });
+              });</script>
+<script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/uploadify/jquery.form.js"></script>
+<script type="text/javascript">
+            $(document).ready(function(){
+                $("#images").on('change',function(){
+                    $("#multiple_upload_form").ajaxForm({
+                        //display the uploaded images
+                        type : 'Post',
+                        replaceTarget: true,
+                        target:"#images_preview",
+                        beforeSubmit:function(e){
+                            $(".uploading").show();
+                        },
+                        success:function(e){
+                            $(".uploading").hide();
+                            //$(".show-tunable .show-editor").on('click', function(){
+                            //    $(this).closest(".show-tunable").toggleClass('shown');
+                            //});
+                            //window.location.reload(true);
+                        },
+                        error:function(e){console.log(e);
+                        }
+                    }).submit();
+                });
+            });
+  </script>
+<script type="text/javascript">
+            $(document).ready(function(){
+                $("#photo_file").on('change',function(){
+                    $("#photo_image_form").ajaxForm({
+                        //display the uploaded images
+                        type : 'Post',
+                        replaceTarget: true,
+                        target:"#div-photo",
+                        beforeSubmit:function(e){
+                            $(".uploading").show();
+                        },
+                        success:function(e){
+                            $(".uploading").hide();
+                            //window.location.reload(true);
+                        },
+                        error:function(e){console.log(e);
+                        }
+                    }).submit();
+                });
+            });
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script><style type="text/css">.fancybox-margin{margin-right:17px;}</style></head>
+          <body><nav id="student-mobile-menu" class="mm-menu mm-pageshadow mm-offcanvas mm-right mm-hasnavbar-top-1 mm-hasnavbar-bottom-1"><div class="mm-navbar mm-navbar-bottom mm-navbar-bottom-1 mm-navbar-size-1 mm-navbar-content-3"><a class="fa fa-envelope" href="#/"></a><a class="fa fa-twitter" href="#/"></a><a class="fa fa-facebook" href="#/"></a></div><div class="mm-navbar mm-navbar-top mm-navbar-top-1 mm-navbar-size-1 mm-hasbtns"><a class="mm-prev mm-btn mm-hidden"></a><a class="mm-title">РњРµРЅСЋ</a><a class="mm-close mm-btn" href="#mm-0"></a></div><div class="mm-panels"><div class="mm-panel mm-opened mm-current mm-hassearch" id="mm-1"><div class="mm-search"><input placeholder="Р§С‚Рѕ РёС‰РµРј?" type="text" autocomplete="off"></div><div class="mm-navbar"><a class="mm-title">РњРµРЅСЋ</a></div><ul class="mm-listview">
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-student.jpg" data-text="За всякое дело берись умело" href="main_blocks.startpage">Электронный университет</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-learning.jpg" href="https://students.kpfu.ru/learning/relocation-and-restoration">Учеба</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-science.jpg" href="https://students.kpfu.ru/sience/undergraduate-and-graduate-students-union">Наука</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-academic-mobility.jpg" href="https://students.kpfu.ru/academic mobility/grants/about">Академическая мобильность</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-accommodation.jpg" href="https://students.kpfu.ru/universiade-village/hostel/about">Общежитие КФУ</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-transport.jpg" href="https://students.kpfu.ru/transport/citytransport/bus215">Транспорт</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-scholarship.jpg" href="https://students.kpfu.ru/scholarship-commissions/academic">Стипендии и социальная поддержка</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-creation.jpg" href="https://students.kpfu.ru/about-student-club/club/about">Творчество</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-sport.jpg" href="https://students.kpfu.ru/sport/club">Спорт и здоровый образ жизни</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-medical-and-preventive-work2.jpg" href="https://students.kpfu.ru/medecine/checkup">Медико-профилактическая работа</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-psychological-service.jpg" href="https://students.kpfu.ru/psychological-service/about/general-information">Психологическая служба КФУ</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-union.jpg" href="https://students.kpfu.ru/trade-union/about">Профком</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-career.jpg" href="https://students.kpfu.ru/work/vacancies-rus">Работа и карьера</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-volunteer.jpg" href="https://students.kpfu.ru/associations/council">Общественные объединения</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-public-organizations.jpg" href="https://students.kpfu.ru/volunteers/dobrovolceskii-centr-studentov-kfu-planeta-dobryh-ludei">Волонтерство</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-public-organizations.jpg" href="https://login.microsoftonline.com">Электронная почта</a></li>
+                </ul><div class="mm-noresultsmsg">Р&nbsp;РµР·СѓР»СЊС‚Р°С‚РѕРІ РЅРµ РЅР°Р№РґРµРЅРѕ</div></div></div></nav>
+<style>
+
+            [data-icon]:before {
+                font-style: normal;
+            }
+            #info .container .photo  label {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 16px;
+                font-size: 16px;
+            }
+
+</style>
+
+      <div id="mm-0" class="mm-page mm-slideout"><div id="student-menu" class="hidden">
+            <div class="student-menu-triangle" style="bottom: -682px; border-width: 0px 0px 682px 417px;"></div>
+            <div class="student-menu-text" style="top: 301px; width: 417px;"></div>
+            <div class="student-menu-line" style="width: 1718px;"></div>
+            <div class="links-wrapper" style="bottom: -682px;">
+                <ul class="links">
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-student.jpg" data-text="За всякое дело берись умело" href="main_blocks.startpage">Электронный университет</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-learning.jpg" href="https://students.kpfu.ru/learning/relocation-and-restoration">Учеба</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-science.jpg" href="https://students.kpfu.ru/sience/undergraduate-and-graduate-students-union">Наука</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-academic-mobility.jpg" href="https://students.kpfu.ru/academic mobility/grants/about">Академическая мобильность</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-accommodation.jpg" href="https://students.kpfu.ru/universiade-village/hostel/about">Общежитие КФУ</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-transport.jpg" href="https://students.kpfu.ru/transport/citytransport/bus215">Транспорт</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-scholarship.jpg" href="https://students.kpfu.ru/scholarship-commissions/academic">Стипендии и социальная поддержка</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-creation.jpg" href="https://students.kpfu.ru/about-student-club/club/about">Творчество</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-sport.jpg" href="https://students.kpfu.ru/sport/club">Спорт и здоровый образ жизни</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-medical-and-preventive-work2.jpg" href="https://students.kpfu.ru/medecine/checkup">Медико-профилактическая работа</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-psychological-service.jpg" href="https://students.kpfu.ru/psychological-service/about/general-information">Психологическая служба КФУ</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-union.jpg" href="https://students.kpfu.ru/trade-union/about">Профком</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-career.jpg" href="https://students.kpfu.ru/work/vacancies-rus">Работа и карьера</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-volunteer.jpg" href="https://students.kpfu.ru/associations/council">Общественные объединения</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-public-organizations.jpg" href="https://students.kpfu.ru/volunteers/dobrovolceskii-centr-studentov-kfu-planeta-dobryh-ludei">Волонтерство</a></li>
+    <li><a data-image="https://students.kpfu.ru/themes/kpfu/sharing/images/student-menu-public-organizations.jpg" href="https://login.microsoftonline.com">Электронная почта</a></li>
+                </ul>
+            </div>
+            <div class="student-menu-close fa fa-times"></div>
+        </div><div id="page" class="">
+<div id="mobile-menu">
+            
+        <div class="cs-select cs-skin-overlay cs-links" tabindex="0"><span class="cs-placeholder">Студентам</span><div class="cs-options"><ul><li class="cs-optgroup"><span>Что вас интересует?</span><ul><li data-option="" data-value="javascript:void(0);"><span>Студентам</span></li><li data-option="" data-value="javascript:void(0);"><span>Абитуриентам</span></li><li data-option="" data-value="javascript:void(0);"><span>Родителям</span></li><li data-option="" data-value="javascript:void(0);"><span>Сотрудникам</span></li><li data-option="" data-value="javascript:void(0);"><span>Выпускникам</span></li><li data-option="" data-value="javascript:void(0);"><span>Пресс-центр</span></li><li data-option="" data-value="javascript:void(0);"><span>Партнёрам</span></li><li data-option="" data-value="javascript:void(0);"><span>Газета "Казанский университет"</span></li><li data-option="" data-value="javascript:void(0);"><span>Газета "Дарелфанун"</span></li><li data-option="" data-value="javascript:void(0);"><span>Библиотека</span></li><li data-option="" data-value="javascript:void(0);"><span>Телевидение КФУ</span></li><li data-option="" data-value="javascript:void(0);"><span>МИП</span></li><li data-option="" data-value="javascript:void(0);"><span>Фотобанк</span></li></ul></li><div class="cs-select-close fa fa-times"></div></ul></div><select class="cs-select cs-skin-overlay cs-links">
+                <optgroup label="Что вас интересует?">
+                    <option value="javascript:void(0);">Студентам</option>
+                    <option value="javascript:void(0);">Абитуриентам</option>
+                    <option value="javascript:void(0);">Родителям</option>
+                    <option value="javascript:void(0);">Сотрудникам</option>
+                    <option value="javascript:void(0);">Выпускникам</option>
+                    <option value="javascript:void(0);">Пресс-центр</option>
+                    <option value="javascript:void(0);">Партнёрам</option>
+                    <option value="javascript:void(0);">Газета "Казанский университет"</option>
+                    <option value="javascript:void(0);">Газета "Дарелфанун"</option>
+                    <option value="javascript:void(0);">Библиотека</option>
+                    <option value="javascript:void(0);">Телевидение КФУ</option>
+                    <option value="javascript:void(0);">МИП</option>
+                    <option value="javascript:void(0);">Фотобанк</option>
+                </optgroup>
+            </select></div></div>
+
+<!-- КОНЕЦ БЛОКА -->
+        <div id="search-area">
+            <form id="search" type="post" action="">
+                <input type="text" placeholder="Что ищем?">
+            </form>
+        </div>
+<header>
+<a class="login fancybox" href="main_blocks.end_work">
+                     Выход 
+                 </a>
+<!-- кнопка для авторизованного пользователя -->
+            <!--<a class = "login authorized" href = "javascript:void(0);">
+                <i class = "fa fa-user"></i>ЛК
+            </a>-->
+            <a class="home" href="https://kpfu.ru"><i data-icon=""></i></a>
+            <ul id="main-menu" class="hider-wrapper">
+            <li><a href="https://rector.kpfu.ru">Сайт ректора</a></li>
+<li><a href="https://students.kpfu.ru">Студенту</a></li>
+<li><a href="https://admissions.kpfu.ru">Абитуриенту</a></li>
+<li><a href="https://kpfu.ru/staff">Сотруднику</a></li>
+<li><a href="https://kpfu.ru/alumnus">Выпускнику</a></li>
+<li><a href="https://kpfu.ru/news-archive">СМИ</a></li>
+
+                <li><a href="https://kpfu.ru/library">Библиотека</a></li>
+                
+                
+                
+<li class="more closed" style="display: list-item;">
+                    <a href="javascript:void(0);">...</a>
+                    <ul id="overflow"><li><a href="https://newspaper.kpfu.ru/">Газета "Казанский университет"</a></li><li><a href="https://tv.kpfu.ru/">Телеканал "Universmotri"</a></li><li><a href="https://darelfonyn.kpfu.ru">Газета "Darelfonyn"</a></li></ul>
+                </li>
+            </ul>
+            <div class="actions">
+<div class="links">
+                    <a href="https://kpfu.ru/about_university/internet-priemnaya"><i class="email-ico" data-icon=""></i></a>
+                    <a href="https://kpfu.ru/about_university/karta-vseh-obektov"><i class="sitemap-ico" data-icon=""></i></a>
+                    <!--<a class = "search-btn" href = "javascript:void(0);"><i class = "search-ico" data-icon="&#xe090;"></i></a>-->
+                </div>
+            </div>
+        </header>
+<div id="slider">
+            <div class="slider-menu">
+                <a class="logo" href="javascript:void(0);"></a>
+                <h1>Студент online (Портфолио)</h1>
+                <a class="mobile-menu-toggler" href="javascript:void(0);">Меню <i class="fa fa-bars"></i></a>
+            </div>
+        </div>
+<style>
+ .im_dialog_badge {
+    background: #64c270;
+    font-size: 11px;
+    padding: 5px;
+    border-radius: 11px;
+    min-width: 21px;
+    text-align: center;
+    margin-top: 7px;
+    margin-left: -11px;
+}
+.badge {
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+</style>
+
+    <script type="text/javascript">
+         function Open_OPOP() 
+         {
+            $.fancybox.open('<center><b>Уважаемый обучающийся!</b><Br>Перейдя по данной ссылке, в разделе "Информация по образовательным программам" Вы сможете найти интересующую вас информацию<br>по компонентам Основных профессиональных образовательных программ всех направлений/специальностей,<br>реализуемых в Казанском (Приволжском) федеральном университете <a target="blank" href="https://kpfu.ru/sveden/education#eduop">https://kpfu.ru/sveden/education</a></center>');
+         }
+    </script>
+<div id="under-slider-menu">
+            <div class="container clearfix">
+                <a class="ico" href="main_blocks.startpage" title="Вернуться на главную страницу личного кабинета"><i data-icon=""></i></a>
+                
+                <a class="ico" href="new_stud_personal.stud_anketa" title="Портфолио"><i data-icon=""></i></a>
+                <a class="ico" href="private_message.myprocedure" title="Личные сообщения" style="position: relative;">
+                   <i data-icon=""></i>
+<span class="im_dialog_badge badge" id="badge" style="display: inline-block;font-size: 11px;padding: 5px;line-height: 1; position:absolute;">3</span>
+</a>
+<a class="ico" href="site_student_sh_pr_ac.offor_document?p_menu=14&amp;p_type_menu_open=3" title="Интернет-приемная">@</a>
+<a class="ico" href="#" onclick="Open_OPOP();" title="ОПОП"><img style="width:18px;" src="https://shelly.kpfu.ru/pdf/images/opop.PNG"></a>
+<a class="ico" href="main_blocks.stud_settings" title="Настройки"><i data-icon=""></i></a>
+                
+                <div class="student-search">
+                    <a class="ico" href="javascript:void(0);" title="Поиск по базе студентов"><i data-icon=""></i></a>
+                    <form id="student-searchform" action="https://kpfu.ru/main_page" type="POST" class="hidden">
+                        <input type="text" name="p_group_name" placeholder="Поиск по базе студентов" required="">
+                        <input type="hidden" name="p_sub" value="23861">
+                        <input type="hidden" name="p_id" value="-1">
+                        <button type="submit"><i data-icon=""></i></button>
+                    </form>
+                </div>
+<a href="private_message.myprocedure?"><span>Мои сообщения</span></a>
+<a class="active" href="new_stud_personal.stud_anketa?"><span>Личный кабинет</span></a>
+<a href="docs/F_709293703/I_Portfolio1.pdf" target="blank" "=""><span>Инструкция по заполнению Портфолио</span></a>
+</div>
+        </div>
+<script>function PopUpShow(v_type,v_id){
+                        if (arguments.length==1) { 
+                            var v_data = "p_type="+v_type+"&p_stud_id=346231";
+                        }
+                        else 
+                             var v_data = "p_type="+v_type+"&p_id="+v_id+"&p_stud_id=346231";
+
+                      $.ajax({
+                        type: "POST",
+                        url: "IAS$DB.NEW_STUD_PERSONAL.POPUP_FORM",
+                        data: v_data,
+                        success: function(html) {
+                                 $("#ajax-form").empty();
+                                 $("#ajax-form").append(html);
+                                 $.fancybox.open({
+                                      //content: $("#edit-form").html(),
+                                      href: "#edit-form",
+                                      afterShow : function() {
+                                                      $(".datepicker").datepicker({
+                                                        changeMonth: true,
+                                                        changeYear: true
+                                                      });
+                                                      $(".js-example-basic-multiple").select2();
+                                                      $("#my-select-recomend").select2();
+                                                      $("#my-select-recomend").select2({
+                                                                  ajax: {
+                                                                        type : "GET", 
+                                                                        url: "knowledge_base.ajax_select2",
+                                                                        dataType: "json",
+                                                                        delay: 500,   // wait milliseconds before triggering the request
+                                                                        data: function (params) {
+                                                                          return {
+                                                                            q: encodeURIComponent(params.term), // search term
+                                                                            page: params.page
+                                                                          };
+                                                                        },
+                                                                        processResults: function (data, params) {
+                                                                          return {
+                                                                            results: data.items
+                                                                          };
+                                                                        },
+                                                                        cache: true
+                                                                      },
+                                                                      placeholder: "Искать",
+                                                                      maximumInputLength: 20,
+                                                                      escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+                                                                      minimumInputLength: 4,
+                                                                      minimumResultsForSearch: Infinity,
+                                                                      templateResult: formatRepo, // omitted for brevity, see the source of this page
+                                                                      templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+                                                                });
+                                                   }
+                                      
+                                 });
+              
+                        }
+                      });
+                } </script>
+<div id="info" style="background-color:white;">
+                <div class="container">
+ <div class="top clearfix">
+                       <div style="float: left;">
+<div class="photo" style="float: left; background-image: url(docs/F_214864752/haha.jpg?rnd=6371)">
+</div>
+<div style="margin-top: 10px;text-align: center; clear: both;">
+<div class="remove-item" style="margin: 10px;text-align: center;" data-icon="" onclick="open_window('e_student_personal.crop?p_image=F_214864752/haha.jpg&amp;p1=232012&amp;p2=15945308659185544508897065001630&amp;p_new_style=1&amp;p_new_study=1','v_wincrop','1200','1000')"></div>
+<div class="remove-item" style="margin: 10px;text-align: center;" data-icon="" onclick="OpenFancybox(179505,'',1);"></div>
+</div>
+<div><div><span style="width:31px"></span></div> 20% анкеты заполнено</div> 
+</div>
+<div class="left">
+<div class="title with-border">Общие сведения</div>
+                            <div class="info-item">
+                                <span class="name">ФИО:</span>
+                                <span class="value">Шакуров Идрис Фаридович</span>
+                            </div>
+<div class="info-item show-tunable shown">
+                                    <span class="name">Дата рождения:</span>
+                                    <span class="value">09.12.2001</span>
+<div class="action">
+                                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(2,0);">
+                                        </div>
+                                    </div>
+</div>
+<div class="info-item show-tunable ">
+                                    <span class="name">Гражданство:</span>
+                                    <span class="value">Российская Федерация</span>
+</div>
+<div class="info-item show-tunable ">
+                                    <span class="name">Место рождения:</span>
+                                    <span class="value">Казань</span>
+</div>
+<div class="info-item">
+                                <span class="name">Институт (факультут):</span>
+                                <span class="value">ИВМиИТ</span>
+                            </div>
+<div class="info-item">
+                                <span class="name">№ группы:</span>
+                                <span class="value">09-952</span>
+                            </div>
+<div class="info-item">
+                                    <span class="name">№ читательского билета и пароль:</span>
+                                    <span class="value">09-8450</span>
+                                </div>
+<div class="info-item">
+                                    <span class="name">Идентификатор:</span>
+                                    <span class="value">1098450</span>
+                                </div>
+</div>
+<div class="right">
+                                 <div class="show-tunable  ">
+<div class="title with-border">
+                                        <span>Статус</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(0);"></div>
+                                            <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(22,1);"></div>
+</div>
+<div class="info-item" id="line_status"></div>
+</div>
+<div class="title with-border">Предварительный просмотр</div>
+<div class="info-item"><span class="name">Русская версия:</span><a href="https://kpfu.ru/student/IFShakurov" target="v_prew_win">https://kpfu.ru/student/IFShakurov</a></div>
+<div class="info-item"><span class="name">English version:</span><a href="https://eng.kpfu.ru/student/IFShakurov" target="v_prew_win">https://eng.kpfu.ru/student/IFShakurov</a></div>
+</div>
+</div>
+<div class="bottom">
+<div class="title with-border">Пользовательское соглашение</div>
+<script>function change_pub_status2(v_type){
+                                         //alert('111111111111111111111');
+                                         $.ajax({
+                                                  type: "POST",
+                                                  url: "IAS$DB.NEW_STUD_PERSONAL.PUB_STATUS2",
+                                                  data: "p_stud_id="+346231+"&p_type="+v_type,
+                                                  //data: ({p_stud_id:346231,p_field_id:v_field,p_value:v_active, p_type:v_type}),
+                                                          //"p_stud_id=346231&p_field_id="+v_field+"&p_value="+v_active+"",
+                                                  success: function(data) {
+                                                                           //$("#view_"+v_field).empty();
+                                                                           //$("#view_"+v_field).append(html);
+                                                                           $('#sogl').html(data);
+                                                                            null;
+                                                                           }
+                                               });
+                                        } 
+                              </script>
+<div id="sogl">
+<input type="checkbox" checked="" value="1" id="web_agree" name="p_web_agree" onclick="change_pub_status2(1);">
+                                <span>Я принимаю Пользовательское соглашение и даю разрешение порталу КФУ на обработку моих персональных данных в соответствии с Федеральным законом №152-ФЗ от 27.07.2006 года 'О персональных данных'.</span>
+                               
+<p>На Вашей персональной странице портала КФУ будут представлены данные анкеты, которые Вы отметили значком <span class="fa fa-eye" style="color: #018eff;"></span>.</p>
+<input type="checkbox" value="y" id="web_permit" name="p_web_permit" checked="" onclick="change_pub_status2(2);">
+                               <span>Публиковать</span>
+                               
+</div>
+<div class="show-tunable  shown">
+                                    <div class="title with-border" style="padding-top:50px;">
+                                        <span>Дополнительные сведения</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(1);"></div>
+                                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(4,0);"></div>
+</div>
+<p id="line_comment"></p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabs">
+              <div class="tabs-top">
+                  <div class="arrow-left"></div> 
+                  <div class="arrow-right"></div> 
+              </div>
+              <div class="container clearfix">
+<div class="left" style="height: 659px;">
+                        <ul>
+<li class="active">
+                                <a class="tab-nav" href="#education">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Образование</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#language">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Знание языков</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#awards-and-achievements">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Награды и достижения</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#social-activity">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span><font style="font-size:15px;">Общественная деятельность</font></span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#scientific-activity">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span><font style="font-size:15px;">Научно-исслед. деятельность</font></span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#publishing">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Публикации</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#employment">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span><font style="font-size:15px;">Практики и трудоустройство</font></span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#gallery">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Фотогалерея</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#classmates">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Друзья и одногруппники</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#contacts">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Контакты</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+<li>
+                                <a class="tab-nav" href="#teachers">
+                                    <i data-icon=""></i>
+                                    <div class="text">
+                                        <span>Мои преподаватели</span>
+                                    </div>
+                                    <div class="triangle"></div>
+                                </a>
+                            </li>
+</ul>
+     </div>
+<div id="tabs_content"><a name="tabs-content"></a>
+       <div class="right" style="min-height: 659px;">
+<div id="education" class="tab-content active">
+<div class="title">
+                   <span>Предыдущее образование</span>
+              </div>
+<table>
+                <thead>
+                    <tr>
+<td>Тип</td>
+                        <td>Номер</td>
+                        <td>Город</td>
+                        <td>Год окончания</td>
+                        <td>Медаль</td>
+                    </tr>
+                </thead>
+                <tbody>
+<tr class="show-tunable shown">
+<td>Гимназия</td>
+                        <td>МБОУ Гимназия № 36</td>
+                        <td>Казань</td>
+                        <td>2019</td>
+                        <td></td>
+                    </tr><tr>
+</tr></tbody>
+              </table>
+<div class="title">
+                  <span>Дополнительное образование</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(2);"></div>
+</div>
+<table>
+                 <thead>
+                    <tr>
+<td>
+                            <label class="checkbox">
+                                <input type="checkbox table-checkbox">
+                                <i class="fa fa-square-o"></i>
+                            </label>
+                        </td>
+<td>Учреждение</td>
+                        <td>Направление</td>
+                        <td>Период обучения</td>
+<td>Ред.</td>
+</tr>
+                 </thead>
+               <tbody>
+<tr><td colspan="8">Данных нет.</td></tr>
+ </tbody>
+              </table>
+</div>
+<div id="language" class="tab-content ">
+<div class="title">
+                <span>Родной язык</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(31);"></div>
+                <div class="content-editor" data-icon="" onclick="PopUpShow(31,1);"></div>
+                <div class="show-tunable ">
+                    <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(23,1);"></div>
+                </div>
+</div>
+<div class="info-item">
+                    <span class="value" style="font-size: 16px;">Татарский</span>
+<div class="content-editor" data-icon="" onclick="deleteLang(58);" style="margin-left:5px;"></div>
+</div>
+<div class="title">
+                    <span>Иностранные языки</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(3);"></div>
+</div>
+<table>
+                 <thead>
+                    <tr>
+<td>
+                            <label class="checkbox">
+                                <input type="checkbox table-checkbox">
+                                <i class="fa fa-square-o"></i>
+                            </label>
+                        </td>
+<td>Язык</td>
+                        <td>Уровень владения</td>
+<td>Ред.</td>
+</tr>
+                 </thead>
+               <tbody>
+<tr class="show-tunable shown">
+<td>
+                               <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(152215,1,2);"></div>
+                             </td>
+<td>Немецкий</td>
+                             <td>Пороговый продвинутый уровень&nbsp;</td>
+<td>
+                               <div class="content-editor" data-icon="" onclick="PopUpShow(3,152215);"></div>
+                             </td>
+</tr>
+ </tbody>
+              </table>
+</div>
+<div id="awards-and-achievements" class="tab-content ">
+                <div class="title">
+                    <span>Награды</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(4);"></div>   
+</div>
+<table>
+                    <thead>
+                        <tr>
+<td>
+                                <label class="checkbox">
+                                    <input type="checkbox table-checkbox">
+                                    <i class="fa fa-square-o"></i>
+                                </label>
+                            </td>
+<td>Наименование награды</td>
+                            <td>Дата присуждения</td>
+                            <td>Документ</td>
+<td>Ред.</td>
+</tr>
+                    </thead>
+                 <tbody>
+</tbody>
+                </table>                          
+            </div>
+<div id="social-activity" class="tab-content ">
+<div class="title" style="margin-bottom:0px;">
+                    <span>Социальная работа</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(5);"></div>
+                    <div class="show-tunable  ">
+                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(11,1);"></div>
+                    </div>
+</div>
+<p style="margin-top:8px;margin-bottom:22px;" id="line_social"></p>
+<div class="title" style="margin-bottom:0px;">
+                    <span>Участие в творческих коллективах</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(51);"></div>
+                    <div class="show-tunable  ">
+                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(12,1);"></div>
+                    </div>
+</div>
+<p style="margin-top:8px;margin-bottom:22px;" id="line_art"></p>
+<div class="title" style="margin-bottom:0px;">
+                    <span>Участие в спортивных соревнованиях</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(52);"></div>
+                    <div class="show-tunable  ">
+                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(13,1);"></div>
+                    </div>
+</div>
+<p style="margin-top:8px;margin-bottom:22px;" id="line_sport"></p>
+<div class="title" style="margin-bottom:0px;">
+                    <span>Участие в работе секций и кружков</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(53);"></div>
+                    <div class="show-tunable  ">
+                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(14,1);"></div>
+                    </div>
+</div>
+<p style="margin-top:8px;margin-bottom:22px;" id="line_circle"></p>
+</div>
+<div id="scientific-activity" class="tab-content ">
+                <div class="title">
+                    <span>Научная работа</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(8);"></div>
+</div>
+<table>
+                    <thead>
+                        <tr>
+<td>
+                                <label class="checkbox">
+                                    <input type="checkbox table-checkbox">
+                                    <i class="fa fa-square-o"></i>
+                                </label>
+                            </td>
+<td>Год</td>
+                            <td>Тема</td>
+                            <td>Направление</td>
+                            <td>Научный руководитель</td>
+<td>Ред.</td>
+</tr>
+                    </thead>
+                 <tbody>
+<tr class="show-tunable">
+<td style="width:25px;">&nbsp;</td>
+<td style="width:50px;"></td>
+                                    <td>Дипломная работа: </td>
+                                    <td>&nbsp;</td>
+                                    <td></td>
+<td>
+</td>
+</tr><tr>
+</tr></tbody>
+                </table>
+</div>
+<div id="publishing" class="tab-content ">
+                <div class="title">
+                    <span>Публикации</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(7);"></div>
+</div>
+<table>
+                    <thead>
+                        <tr>
+<td>
+                                <label class="checkbox">
+                                    <input type="checkbox table-checkbox">
+                                    <i class="fa fa-square-o"></i>
+                                </label>
+                            </td>
+<td>Год</td>
+                            <td>Описание</td>
+<td>Ред.</td>
+</tr>
+                    </thead>
+                    <tbody>
+</tbody>
+                </table>
+</div>
+<div id="employment" class="tab-content ">
+<div class="title">
+                <span>Текущая занятость</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(91,-1);"></div>
+                <div class="show-tunable ">
+                    <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(,1,91);"></div>
+                </div>
+</div>
+<div class="info-item show-tunable shown">
+                <span class="name">Находится на учете в службе занятости населения:</span>
+                <span class="value">Нет</span>
+            </div>
+<div class="info-item show-tunable shown">
+                <span class="name">Являюсь самозанятым:</span>
+                <span class="value">Нет</span>
+            </div>
+<div class="info-item show-tunable shown">
+                <span class="name">Являюсь индивидуальным предпринимателем:</span>
+                <span class="value">Нет</span>
+            </div>
+<div class="info-item show-tunable shown">
+                <span class="name">Трудоустроен по полученной специальности:</span>
+                <span class="value">Нет</span>
+            </div>
+<div class="title">
+                <span>Резюме</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(92);"></div>
+</div>
+<div class="title">
+                <span>Практика</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(93);"></div>
+</div>
+<table>
+                    <thead>
+                        <tr>
+<td>
+                                <label class="checkbox">
+                                    <input type="checkbox table-checkbox">
+                                    <i class="fa fa-square-o"></i>
+                                </label>
+                            </td>
+<td>Период</td>
+                            <td>Компания</td>
+<td>Ред.</td>
+</tr>
+                    </thead>
+                 <tbody>
+</tbody>
+                </table>
+<div class="title">
+                        <span>Практика</span>
+</div>
+<table>
+                            <thead>
+                                <tr>
+<td>Семестр</td>
+                                    <td>Вид практики</td>
+                                    <td>Тип практики</td>
+                                    <td>Место практики</td>
+                                    <td>Отзыв</td>
+</tr>
+                            </thead>
+                         <tbody>
+<tr class="show-tunable">
+<td>Сем. 2</td>
+                          <td>Учебная</td>
+                          <td>ознакомительная практика</td>
+                          <td></td>
+                          <td>
+</td>
+</tr>
+<tr class="show-tunable">
+<td>Сем. 4</td>
+                          <td>Учебная</td>
+                          <td>технологическая (проектно-технологическая) практика</td>
+                          <td></td>
+                          <td>
+</td>
+</tr>
+</tbody>
+                        </table>
+<div class="title">
+                <span>Опыт работы</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(9);"></div>
+</div>
+<table>
+                    <thead>
+                        <tr>
+<td>
+                                <label class="checkbox">
+                                    <input type="checkbox table-checkbox">
+                                    <i class="fa fa-square-o"></i>
+                                </label>
+                            </td>
+<td>Период</td>
+                            <td>Компания</td>
+                            <td>Должность</td>
+<td>Ред.</td>
+</tr>
+                    </thead>
+                 <tbody>
+</tbody>
+                </table>
+</div>
+<div id="gallery" class="tab-content ">
+                <div class="title">
+                    <span>Фотогалерея</span>
+                </div>
+                <div id="gallery_photo">
+</div>
+<div id="images_preview"></div>
+<script>
+              function fClose(){
+               window.location.href="new_stud_personal.stud_anketa";
+               }
+               function multyload(){   
+                       var vHeight=$(window).scrollTop();
+                   var vWidth=$(window).width()/2-280;
+                   $("#span_multyload").empty();
+                   $("#span_multyload").append("<span class=status_wind>"+
+                                                   "<div class=ui-overlay>"+
+                                                     "<div class=ui-widget-overlay style=height:100%;z-index:1;></div>"+
+                                                     "<div class=ui-widget-shadow style='width: 590px; height: 400px;padding-top:12px;padding-left:10px; position: absolute;z-index:999;opacity: 1;background: none; background-color:#cccccc; left: "+vWidth+"px; top: 60px;'><span style='font-size:18px;margin-top:10px;margin-left:1px;'>Мультизагрузка файлов <span style=font-size:12px;>(в форматах .jpg, .gif, .png не более 50 Мб каждый)</span>"+
+                                                            "<span  title=Закрыть style='cursor: pointer;position: relative; right: -10px;font-size:16px;' onclick='fClose()'>x</span></div>"+
+                                                  "</div>"+
+                                                  "<div style='position: absolute; width: 563px; height: 318px;z-index:999;left: "+vWidth+"px; top: 100px; padding: 10px 10px 10px 10px;' class='ui-widget ui-widget-content' id=this_window>"+
+                                                     "<div class='ui-dialog-content ui-widget-content' style='background: none; border: 0;'>"+
+                                                        "<p>"+
+                                                            "<iframe src='portal_file.plupload_eu?param1=232012&param2=15945308659185544508897065001630&p_folder_id=346231&p_type=-20' style='width: 560px;height:440px;border: none;'></iframe >"+
+                                                         "</p>"+
+                                                     "</div>"+
+                                                  "</div>"+
+                                                "</span>");
+                  }
+             </script>
+             <span id="span_multyload" style="z-index:999999;"></span>
+<div class="header">Фото <input type="button" value="Добавить" onclick="multyload();"></div>
+</div>
+<div id="classmates" class="tab-content ">
+<div class="title">
+               <span>Друзья</span>
+<div class="plus-one" data-icon="" onclick="PopUpShow(15);"></div>
+                    <div class="content-editor" data-icon="" onclick="PopUpShow(15,346231);"></div>
+                    <div class="show-tunable ">
+                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(25,1);"></div>
+                    </div>
+</div>
+<table>
+                    <thead>
+                        <tr>
+                            <td>ФИО</td>
+                            <td>Институт</td>
+                            <td>Ссылка на станицу</td>
+<td>Личное сообщение</td>
+</tr>
+                    </thead>
+                 <tbody>
+</tbody>
+             </table>
+<div class="title">
+                        <span>Одногруппники</span>
+<div class="show-tunable ">
+                        <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(26,1);"></div>
+                    </div>
+</div>
+<table>
+                    <thead>
+                        <tr>
+                            <td>ФИО</td>
+                            <td>Ссылка на станицу</td>
+<td>Личное сообщение</td>
+</tr>
+                    </thead>
+                 <tbody>
+<tr>
+                            <td>Акмырадова Хумай</td>
+                            <td>
+<a href="https://kpfu.ru/student/KAkmyradova" target="v_prew_win">https://kpfu.ru/student/KAkmyradova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=384783">написать</a></td>
+</tr>
+<tr>
+                            <td>Асянова Василя</td>
+                            <td>
+<a href="https://kpfu.ru/student/VRAsyanova" target="v_prew_win">https://kpfu.ru/student/VRAsyanova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=351588">написать</a></td>
+</tr>
+<tr>
+                            <td>Ахметзянова Рената</td>
+                            <td>
+<a href="https://kpfu.ru/student/RRAkhmetzyanova" target="v_prew_win">https://kpfu.ru/student/RRAkhmetzyanova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354485">написать</a></td>
+</tr>
+<tr>
+                            <td>Багавиев Ренат</td>
+                            <td>
+<a href="https://kpfu.ru/student/ReRBagaviev" target="v_prew_win">https://kpfu.ru/student/ReRBagaviev</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=351308">написать</a></td>
+</tr>
+<tr>
+                            <td>Барад Дарья</td>
+                            <td>
+<a href="https://kpfu.ru/student/DABarad" target="v_prew_win">https://kpfu.ru/student/DABarad</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=326344">написать</a></td>
+</tr>
+<tr>
+                            <td>Вагизов Данил</td>
+                            <td>
+<a href="https://kpfu.ru/student/DEVagizov" target="v_prew_win">https://kpfu.ru/student/DEVagizov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=351823">написать</a></td>
+</tr>
+<tr>
+                            <td>Васильев Максим</td>
+                            <td>
+<a href="https://kpfu.ru/student/MDVasilev" target="v_prew_win">https://kpfu.ru/student/MDVasilev</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354626">написать</a></td>
+</tr>
+<tr>
+                            <td>Галимов Галиаскар</td>
+                            <td>
+<a href="https://kpfu.ru/student/GAGalimov" target="v_prew_win">https://kpfu.ru/student/GAGalimov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354280">написать</a></td>
+</tr>
+<tr>
+                            <td>Захаров Николай</td>
+                            <td>
+<a href="https://kpfu.ru/student/NSZakharov" target="v_prew_win">https://kpfu.ru/student/NSZakharov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=352387">написать</a></td>
+</tr>
+<tr>
+                            <td>Зинуров Рамазан</td>
+                            <td>
+<a href="https://kpfu.ru/student/RaRZinurov" target="v_prew_win">https://kpfu.ru/student/RaRZinurov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=346205">написать</a></td>
+</tr>
+<tr>
+                            <td>Иванов Евгений</td>
+                            <td>
+<a href="https://kpfu.ru/student/EvgeAIvanov" target="v_prew_win">https://kpfu.ru/student/EvgeAIvanov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=351289">написать</a></td>
+</tr>
+<tr>
+                            <td>Измайлова Гульназ</td>
+                            <td>
+<a href="https://kpfu.ru/student/GDIzmajlova" target="v_prew_win">https://kpfu.ru/student/GDIzmajlova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354579">написать</a></td>
+</tr>
+<tr>
+                            <td>Калугин Игорь</td>
+                            <td>
+<a href="https://kpfu.ru/student/IgSKalugin" target="v_prew_win">https://kpfu.ru/student/IgSKalugin</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=355907">написать</a></td>
+</tr>
+<tr>
+                            <td>Каримов Алмаз</td>
+                            <td>
+<a href="https://kpfu.ru/student/AKKarimov" target="v_prew_win">https://kpfu.ru/student/AKKarimov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=352372">написать</a></td>
+</tr>
+<tr>
+                            <td>Касакин Максим</td>
+                            <td>
+<a href="https://kpfu.ru/student/MEKasakin" target="v_prew_win">https://kpfu.ru/student/MEKasakin</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354627">написать</a></td>
+</tr>
+<tr>
+                            <td>Кириллов Сергей</td>
+                            <td>
+<a href="https://kpfu.ru/student/SAKirillov" target="v_prew_win">https://kpfu.ru/student/SAKirillov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=330856">написать</a></td>
+</tr>
+<tr>
+                            <td>Кондратьева Дарья</td>
+                            <td>
+<a href="https://kpfu.ru/student/DAKondrateva" target="v_prew_win">https://kpfu.ru/student/DAKondrateva</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=355874">написать</a></td>
+</tr>
+<tr>
+                            <td>Куприянова Ирина</td>
+                            <td>
+<a href="https://kpfu.ru/student/IEKupriyanova" target="v_prew_win">https://kpfu.ru/student/IEKupriyanova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=330632">написать</a></td>
+</tr>
+<tr>
+                            <td>Мараев Данила</td>
+                            <td>
+<a href="https://kpfu.ru/student/DPMaraev" target="v_prew_win">https://kpfu.ru/student/DPMaraev</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=353895">написать</a></td>
+</tr>
+<tr>
+                            <td>Мугафин Арслан</td>
+                            <td>
+<a href="https://kpfu.ru/student/AVMugafin" target="v_prew_win">https://kpfu.ru/student/AVMugafin</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=346291">написать</a></td>
+</tr>
+<tr>
+                            <td>Наседкина Юлия</td>
+                            <td>
+<a href="https://kpfu.ru/student/YSNasedkina" target="v_prew_win">https://kpfu.ru/student/YSNasedkina</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=352560">написать</a></td>
+</tr>
+<tr>
+                            <td>Пивоваров Станислав</td>
+                            <td>
+<a href="https://kpfu.ru/student/SSPivovarov" target="v_prew_win">https://kpfu.ru/student/SSPivovarov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354278">написать</a></td>
+</tr>
+<tr>
+                            <td>Селезнев Станислав</td>
+                            <td>
+<a href="https://kpfu.ru/student/SASeleznev" target="v_prew_win">https://kpfu.ru/student/SASeleznev</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=352677">написать</a></td>
+</tr>
+<tr>
+                            <td>Фаткуллина Гульшат</td>
+                            <td>
+<a href="https://kpfu.ru/student/GRFatkullina" target="v_prew_win">https://kpfu.ru/student/GRFatkullina</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=355948">написать</a></td>
+</tr>
+<tr>
+                            <td>Хабибуллин Ранис</td>
+                            <td>
+<a href="https://kpfu.ru/student/RaRKhabibullin" target="v_prew_win">https://kpfu.ru/student/RaRKhabibullin</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354279">написать</a></td>
+</tr>
+<tr>
+                            <td>Хайруллин Булат</td>
+                            <td>
+<a href="https://kpfu.ru/student/BMKhayrullin" target="v_prew_win">https://kpfu.ru/student/BMKhayrullin</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=363580">написать</a></td>
+</tr>
+<tr>
+                            <td>Хасанова Аделя</td>
+                            <td>
+<a href="https://kpfu.ru/student/AdRKhasanova" target="v_prew_win">https://kpfu.ru/student/AdRKhasanova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=384229">написать</a></td>
+</tr>
+<tr>
+                            <td>Хасаханов Артур</td>
+                            <td>
+<a href="https://kpfu.ru/student/ARKhasakhanov" target="v_prew_win">https://kpfu.ru/student/ARKhasakhanov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=345753">написать</a></td>
+</tr>
+<tr>
+                            <td>Хикматов Ильдар</td>
+                            <td>
+<a href="https://kpfu.ru/student/IIKhikmatov" target="v_prew_win">https://kpfu.ru/student/IIKhikmatov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=345877">написать</a></td>
+</tr>
+<tr>
+                            <td>Хусаенов Амир</td>
+                            <td>
+<a href="https://kpfu.ru/student/AIKhusaenov" target="v_prew_win">https://kpfu.ru/student/AIKhusaenov</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=352235">написать</a></td>
+</tr>
+<tr>
+                            <td>Чернова Мария</td>
+                            <td>
+<a href="https://kpfu.ru/student/MariyaAChernova" target="v_prew_win">https://kpfu.ru/student/MariyaAChernova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=384797">написать</a></td>
+</tr>
+<tr>
+                            <td>Шаронова Мария</td>
+                            <td>
+<a href="https://kpfu.ru/student/MSSharonova" target="v_prew_win">https://kpfu.ru/student/MSSharonova</a>
+</td>
+                            <td><a href="private_message.myprocedure?p_stud_id=354755">написать</a></td>
+</tr>
+</tbody>
+               </table>
+ </div>
+<div id="contacts" class="tab-content ">
+ <div class="contacts-left">
+
+                <div class="title">
+                    <span>Контакты</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(13);"></div>
+</div>
+<div class="info-item show-tunable ">
+                            <span class="name">E-mail:</span>
+                            <span class="value"></span>
+<div class="action">
+                                <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(3,1);"></div>
+                            </div>
+</div>
+<div class="info-item show-tunable ">
+                            <span class="name">Телефон:</span>
+                            <span class="value">79274825803</span>
+<div class="action">
+                                <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(10,1);"></div>
+                            </div>
+</div>
+<div class="info-item show-tunable ">
+                            <span class="name">Skype:</span>
+                            <span class="value"></span>
+<div class="action">
+                                <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(1,1,13);"></div>
+                            </div>
+</div>
+<div class="title">
+                        <span>Социальные сети</span>
+<div class="content-editor" data-icon="" onclick="PopUpShow(14);"></div>
+<div class="content-editor" data-icon="" onclick="PopUpShow(20);"></div>
+</div>
+<div class="info-item show-tunable ">
+                            <span class="name">VK.com:</span>
+                            <span class="value"></span>
+<div class="action">
+                                <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(2,1,13);"></div>
+                            </div>
+</div>
+<div class="info-item show-tunable ">
+                            <span class="name">Facebook:</span>
+                            <span class="value"></span>
+<div class="action">
+                                <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(3,1,13);"></div>
+                            </div>
+</div>
+<div class="info-item show-tunable ">
+                            <span class="name">Twitter:</span>
+                            <span class="value"></span>
+<div class="action">
+                                <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(4,1,13);"></div>
+                            </div>
+</div>
+<div class="info-item show-tunable ">
+                            <span class="name">Google+:</span>
+                            <span class="value"></span>
+<div class="action">
+                                <div class="show-editor fa fa-eye-slash" onclick="change_pub_status(5,1,13);"></div>
+                            </div>
+</div>
+</div>
+<div class="contacts-right" id="ymap">
+<div class="title">
+                    <span>Где меня найти:</span>
+<div class="show-tunable shown">
+                        <div class="show-editor fa fa-eye-slash"></div>
+                    </div>
+</div>
+<div>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+ ymaps.ready(function () { 
+   var map = new ymaps.Map("YMapsID", {
+           // Центр карты (широта / долгота)
+          center: [55.790833, 49.121736],
+          // Коэффициент масштабирования
+          zoom: 13,
+          // Тип карты
+          type: "yandex#map"
+          //behaviors: ["scrollZoom"]
+    });
+var myPlacemark_1 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.790986,49.122073], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №01 (Главный корпус университета)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*1, -5*1]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_1);
+                
+var myPlacemark_2 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.790407,49.122624], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №02 (Восточное крыло главного корпуса университета)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*2, -5*2]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_2);
+                
+var myPlacemark_4 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.790960,49.119189], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №03 (Астрономическая обсерватория)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*4, -5*4]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_4);
+                
+var myPlacemark_10 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.789906,49.121901], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №04 (НИ химический институт им.А.М.Бутлерова)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*10, -5*10]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_10);
+                
+var myPlacemark_3 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.790410,49.120536], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №05 (Библиотека-книгохранилище)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*3, -5*3]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_3);
+                
+var myPlacemark_5 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.791558,49.120305], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №06 (Дом ректора - кафедра механики и оболочек)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*5, -5*5]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_5);
+                
+var myPlacemark_6 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.791697,49.119629], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №07 (Геометрический корпус)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*6, -5*6]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_6);
+                
+var myPlacemark_7 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.791483,49.119285], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №08 (Криогенный корпус)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*7, -5*7]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_7);
+                
+var myPlacemark_9 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.789715,49.120183], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №09 (Кафедра физики твердого тела)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*9, -5*9]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_9);
+                
+var myPlacemark_12 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.790343,49.119747], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №10 (Корпус ''Западный полуциркуль'')"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*12, -5*12]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_12);
+                
+var myPlacemark_13 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.789615,49.121467], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №11 (Корпус ''Восточный полуциркуль'')"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*13, -5*13]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_13);
+                
+var myPlacemark_16 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.791819,49.118501], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №12 (Физический факультет)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*16, -5*16]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_16);
+                
+var myPlacemark_14 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.794285,49.113493], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №13А (Геологический корпус, блок А)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*14, -5*14]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_14);
+                
+var myPlacemark_15 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.793852,49.113428], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №13Б (Геологический корпус, блок Б)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*15, -5*15]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_15);
+                
+var myPlacemark_200 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.792088,49.121972], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №14 (Корпус № 2)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*200, -5*200]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_200);
+                
+var myPlacemark_21 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.792538,49.123473], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №15 (Экологический факультет университета)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*21, -5*21]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_21);
+                
+var myPlacemark_18 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.792551,49.119980], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №16 (Химический факультет)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*18, -5*18]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_18);
+                
+var myPlacemark_19 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.79151,49.12294], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №17 (Центр информационных технологий)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*19, -5*19]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_19);
+                
+var myPlacemark_321 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.793814,49.114879], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №18А"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*321, -5*321]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_321);
+                
+var myPlacemark_322 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.793814,49.114879], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №18Б"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*322, -5*322]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_322);
+                
+var myPlacemark_240 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.786687,49.126137], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №19 (Здание главного учебного корпуса)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*240, -5*240]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_240);
+                
+var myPlacemark_323 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.786605,49.126222], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №20 (Здание учебного корпуса блок А)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*323, -5*323]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_323);
+                
+var myPlacemark_324 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.786605,49.126222], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №21 (Здание учебного корпуса блок Б)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*324, -5*324]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_324);
+                
+var myPlacemark_325 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.786605,49.126222], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №22 (Здание учебного корпуса блок В)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*325, -5*325]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_325);
+                
+var myPlacemark_326 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.796226,49.130083], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №23"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*326, -5*326]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_326);
+                
+var myPlacemark_327 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.801043,49.134413], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №24"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*327, -5*327]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_327);
+                
+var myPlacemark_328 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.788448,49.111586], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №25"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*328, -5*328]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_328);
+                
+var myPlacemark_31 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.788448,49.111586], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №26"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*31, -5*31]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_31);
+                
+var myPlacemark_28 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.793241,49.143088], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №27"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*28, -5*28]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_28);
+                
+var myPlacemark_29 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.793241,49.143088], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №28"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*29, -5*29]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_29);
+                
+var myPlacemark_30 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.793241,49.143088], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №29 (Спортивный корпус)"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*30, -5*30]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_30);
+                
+var myPlacemark_32 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.789962,49.108431], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №30"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*32, -5*32]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_32);
+                
+var myPlacemark_241 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.787972,49.111071], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №31"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*241, -5*241]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_241);
+                
+var myPlacemark_35 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.789515,49.158512], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №32"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*35, -5*35]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_35);
+                
+var myPlacemark_227 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.784,49.116], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №33"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*227, -5*227]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_227);
+                
+var myPlacemark_40 = new ymaps.Placemark(
+                                    // Координаты метки
+                                    [55.821958,49.098273], 
+                                      //Свойства метки:
+                                     {  // контент балуна метки
+                                        balloonContent: "Учебное здание №34"
+                                        
+                                      }, 
+                                        // Опции метки:
+                                      { //флаг перетаскивания метки 
+                                          draggable: true,
+                                        //показывать значок метки при открытии балуна 
+                                          hideIconOnBalloonOpen: false,
+                                          preset: "islands#blueCircleIcon"
+                                          //iconOffset: [-3*40, -5*40]
+                                      
+                                       }
+                    );
+
+                // Добавление метки на карту
+                map.geoObjects.add(myPlacemark_40);
+                
+});
+     //   map.behaviors.disable("scrollZoom");
+
+    </script>
+<div id="YMapsID" style="width:330px;height:300px;float:left;margin-bottom:10px;position:relative;"></div>
+<div id="map_info" style="width:300px;height:10px;float:left;margin-bottom:5px;position:relative;background-image:url(https://shelly.kpfu.ru/pdf/picture/mainpage_new/Layer_123.png); background-repeat:repeat;"></div><br>
+</div>
+</div>
+</div>
+<div id="teachers" class="tab-content ">
+<div class="title">
+                    <span>Мои преподаватели</span>
+</div>
+<div id="teachers_search" class="content-editor">
+<a href="https://kpfu.ru/staff/sotrudniki-kfu" target="_blank">Поиск преподавателей</a>
+</div>
+<table>
+                    <thead>
+                        <tr>
+                            <td>ФИО</td>
+<td>Личное сообщение</td>
+</tr>
+                    </thead>
+                 <tbody>
+<tr>
+<td>
+<a href="https://kpfu.ru/Radik.Ashatov" target="v_prew_win">Асхатов Радик Мухаметгалеевич</a>
+</td>
+<td><a href="mailto:Radik.Ashatov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Alfira.Ahmedova" target="v_prew_win">Ахмедова Альфира Мазитовна</a>
+</td>
+<td><a href="mailto:Alfira.Ahmedova@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/dilyara.akhmetshina" target="v_prew_win">Ахметшина Диляра Ихсановна</a>
+</td>
+<td><a href="mailto:DIAkhmetshina@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/irina.balafendieva" target="v_prew_win">Балафендиева Ирина Сергеевна</a>
+</td>
+<td><a href="mailto:ISBalafendieva@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Alfiya.Baranova" target="v_prew_win">Баранова Альфия Рафаиловна</a>
+</td>
+<td><a href="mailto:baranova.alfiyarafailovna@mail.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Naille.Boukharaev" target="v_prew_win">Бухараев Наиль Раисович</a>
+</td>
+<td><a href="mailto:boukharay@gmail.com">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Gulnara.Valieva" target="v_prew_win">Валиева Гульнара Фирдусовна</a>
+</td>
+<td><a href="mailto:fae_gulnara@bk.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/galim.vahitov" target="v_prew_win">Вахитов Галим Зарибзянович</a>
+</td>
+<td><a href="mailto:GZVahitov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Ilvira.Galiulina" target="v_prew_win">Галиулина Ильвира Рафаилевна</a>
+</td>
+<td><a href="mailto:Ilvira.Galiulina@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/viktoriya.shkurko" target="v_prew_win">Гараева Виктория Юрьевна</a>
+</td>
+<td><a href="mailto:viktoria-dom@mail.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Anvar.Gafarov" target="v_prew_win">Гафаров Анвар Айратович</a>
+</td>
+<td><a href="mailto:Anvar.Gafarov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+Горбунов Владимир Михайлович
+</td>
+<td><a href="mailto:VMGorbunov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/vladislav.gorbunov" target="v_prew_win">Горбунов Владислав Маратович</a>
+</td>
+<td><a href="mailto:vlm.gorbunov@yandex.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Vladimir.Dvoenosov" target="v_prew_win">Двоеносов Владимир Георгиевич</a>
+</td>
+<td><a href="mailto:dvoenosovvg@yandex.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Vyacheslav.Dubrovin" target="v_prew_win">Дубровин Вячеслав Тимофеевич</a>
+</td>
+<td><a href="mailto:Vyacheslav.Dubrovin@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Arslan.Enikeev" target="v_prew_win">Еникеев Арслан Ильясович</a>
+</td>
+<td><a href="mailto:a_eniki@inbox.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/iskander.enikeev" target="v_prew_win">Еникеев Искандер Арсланович</a>
+</td>
+<td><a href="mailto:IAEnikeev@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/kamil.enikeev" target="v_prew_win">Еникеев Камиль Шамилевич</a>
+</td>
+<td><a href="mailto:KSEnikeev@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Razil.Enikeev" target="v_prew_win">Еникеев Разиль Радикович</a>
+</td>
+<td><a href="mailto:renikeev@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/zulfira.enikeeva" target="v_prew_win">Еникеева Зульфира Аснафовна</a>
+</td>
+<td><a href="mailto:ZAEnikeeva@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/alisher.zhumaniezov" target="v_prew_win">Жуманиёзов Алишер Равшонбекович</a>
+</td>
+<td><a href="mailto:ASZhumaniezov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/guzels.zakirova" target="v_prew_win">Закирова Гюзель Шагитовна</a>
+</td>
+<td><a href="mailto:GSZakirova@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Farida.Ismaeva" target="v_prew_win">Исмаева Фарида Хамисовна</a>
+</td>
+<td><a href="mailto:Farida.Ismaeva@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Pavel.Korchagin" target="v_prew_win">Корчагин Павел Анатольевич</a>
+</td>
+<td><a href="mailto:Pavel.Korchagin@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/eduard.krasnov" target="v_prew_win">Краснов Эдуард Владимирович</a>
+</td>
+<td><a href="mailto:EVKrasnov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/tatyana.marsheva" target="v_prew_win">Маршева Татьяна Владимировна</a>
+</td>
+<td><a href="mailto:TVMarsheva@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/olga.matrenina" target="v_prew_win">Матренина Ольга Михайловна</a>
+</td>
+<td><a href="mailto:OMMatrenina@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Alsu.Makhmutova" target="v_prew_win">Махмутова Алсу Нигматяновна</a>
+</td>
+<td><a href="mailto:amakhmut@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/olgaa.medvedeva" target="v_prew_win">Медведева Ольга Анатолиевна</a>
+</td>
+<td><a href="mailto:OAMedvedeva@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Valery.Mokeychev" target="v_prew_win">Мокейчев Валерий Степанович</a>
+</td>
+<td><a href="mailto:Valery.Mokeychev@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/nikolaj.prokopev" target="v_prew_win">Прокопьев Николай Аркадьевич</a>
+</td>
+<td><a href="mailto:NiAProkopev@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Elena.Rung" target="v_prew_win">Рунг Елена Владимировна</a>
+</td>
+<td><a href="mailto:Elena.Rung@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/shamil.sabitov" target="v_prew_win">Сабитов Шамиль Рустэмович</a>
+</td>
+<td><a href="mailto:SRSabitov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/liliyai.safina" target="v_prew_win">Сафина Лилия Ильхамовна</a>
+</td>
+<td><a href="mailto:LiliyISafina@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/ajrat.sitdikov" target="v_prew_win">Ситдиков Айрат Салимович</a>
+</td>
+<td><a href="mailto:ASSitdikov@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Farida.Sitdikova" target="v_prew_win">Ситдикова Фарида Бизяновна</a>
+</td>
+<td><a href="mailto:farida7777@yandex.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/nataliya.hazieva" target="v_prew_win">Хазиева Наталия Олеговна</a>
+</td>
+<td><a href="mailto:NaOHazieva@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/violetta.chebakova" target="v_prew_win">Чебакова Виолетта Юрьевна</a>
+</td>
+<td><a href="mailto:VJChebakova@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/Alina.Shigabutdinova" target="v_prew_win">Шигабутдинова Алина Леонидовна</a>
+</td>
+<td><a href="mailto:Alina.Shigabutdinova@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/landysh.juzmuhametova" target="v_prew_win">Юзмухаметова Ландыш Нургаяновна</a>
+</td>
+<td><a href="mailto:LNJuzmuhametova@kpfu.ru">написать</a></td>
+</tr>
+<tr>
+<td>
+<a href="https://kpfu.ru/marat.yahin" target="v_prew_win">Яхин Марат Айдарович</a>
+</td>
+<td><a href="mailto:Yakhinmarat94@gmail.com">написать</a></td>
+</tr>
+</tbody>
+             </table>
+</div>
+
+    </div>
+</div>
+</div>
+        </div>
+     
+<footer>
+            <div class="footer-top clearfix">
+                <div class="left">
+                    <a class="logo" style="height: 80px;" href="https://kpfu.ru"></a>
+                    <div class="name"><span>Казанский федеральный университет</span></div>
+                    <div class="address">
+                        Адрес: 420008, Казань, ул. Кремлевская, 18.<br>
+                        Телефон: (843) 233-71-09<br>
+                        Факс: (843) 292-44-48<br>
+                        Адрес электронной почты: <a style="color:#012a77;" href="mailto:public.mail@kpfu.ru">public.mail@kpfu.ru</a>
+                    </div>
+                </div>
+<div class="right" style="float:left; width:400px; ">
+<a style="color:yellow; font-size:x-large;" href="#" class="bvi-open" title="Версия для слабовидящих">Версия для слабовидящих</a>
+</div>
+                <div class="qr-code-wrapper">
+</div>
+            </div>
+<div class="footer-bottom clearfix">
+    <ul class="bottom-menu">
+<li><a href="https://kpfu.ru/about_university">Об университете</a></li>
+
+    <li><a href="https://kpfu.ru/?p_map=1">Карта сайта</a></li>
+
+    <li><a href="https://kpfu.ru/about_university/brendbuk-kfu">Фирменный стиль</a></li>
+
+    <li><a href="https://kpfu.ru/news/press-centr-kfu/akkreditaciya-zhurnalistov">Аккредитация журналистов</a></li>
+
+    <li><a href="https://kpfu.ru/staff/telefonnyj-spravochnik-kfu">Телефонный справочник</a></li>
+
+    <li><a href="https://kpfu.ru/dis/podderzhka-i-soprovozhdenie-it-uslug">Техническая поддержка</a></li>
+
+    <li><a href="https://kpfu.ru/about_university/internet-priemnaya">Обратная связь</a></li>
+</ul>
+    <div class="copyright">© Казанский федеральный университет, 2021
+</div></div>
+</footer>
+ <div id="login">
+            <div class="login-wrapper popup">
+                <div class="popup-title">Вход в личный кабинет</div>
+                <form type="post" action="">
+                    <div class="pole clearfix">
+                        <div class="label">Ваш логин</div>
+                        <input class="no-margin" type="text" name="name" placeholder="Григорий" required="">
+                    </div>
+                    <div class="pole clearfix">
+                        <div class="label">Ваш E-mail</div>
+                        <input class="no-margin" type="email" placeholder="email@kpfu.ru" required="">
+                    </div>
+                    <div class="after-pole clearfix">
+                        <label for="remember">
+                            <input id="remember" name="remember" type="checkbox">
+                            <span>запомнить меня</span>
+                        </label>
+                        <input type="submit" value="Отправить">
+                    </div>
+                    <a class="forgot" href="javascript:void(0);">Забыли пароль?</a>
+                    <a class="register" href="javascript:void(0);">Зарегистрироваться</a>
+                </form>
+            </div>
+        </div>
+      </div><div id="edit-form">
+            <div class="edit-form-wrapper popup" id="ajax-form">
+                <div class="popup-title">Форма добавления/редактирования</div>
+
+            </div>
+        </div><div id="message-delete" class="fancy" style="display: none; width:350px;">
+            <div class="message-delete-wrapper popup">
+                <div class="popup-title">Подтвердите удаление</div>
+                <div class="pole full-width clearfix">
+                    Вы уверены, что хотите удалить?
+                </div>
+                <div class="pole full-width center clearfix" id="answer">
+                    <a href="javascript:void(0);" class="blue-btn no-float no-margin">Да</a>
+                    <a href="javascript:$.fancybox.close();" class="blue-btn no-float no-margin">Нет</a>
+                </div>
+            </div>
+        </div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"></div></div>
+    
+
+
+
+
+ 
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/modernizer.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/header.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/student-menu.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/item-hider.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/footer.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/select/classie.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/select/selectFx.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/fancybox/jquery.fancybox.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/sharing/scroll/jquery.mCustomScrollbar.min.js"></script> 
+ <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/personal/sharing/slick/slick.min.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/personal/sharing/mmenu/jquery.mmenu.min.all.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/personal/sharing/jquery.scrollend.js"></script>
+            
+            
+            
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/student/intranet/my-materials/js/select2.min.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/personal/personal/js/script2.js"></script>
+            <script type="text/javascript" src="https://shelly.kpfu.ru/pdf/supersite/js_aboutme/additional_script.js"></script>
+<script type="text/javascript">
+    
+    //onload = function () {location += '#tabs-content'}
+    function open_window(v_url,v_wname,v_width,v_height) {
+             window.open(v_url,v_wname,"width="+v_width+",height="+v_height+",resizable=1,toolbar=no,scrollbars=yes");
+    }
+   
+    function change_pub_status(v_field,v_active,v_type)
+        {     
+        $.ajax({
+                type: "POST",
+                url: "IAS$DB.NEW_STUD_PERSONAL.PUB_STATUS",
+                data: ({p_stud_id:346231,p_field_id:v_field,p_value:v_active, p_type:v_type}),
+                //"p_stud_id=346231&p_field_id="+v_field+"&p_value="+v_active+"",
+                success: function(html) {
+                                            //$("#view_"+v_field).empty();
+                                            $("#view_"+v_field).append(html);
+                                          null;
+                                        }
+              });
+        }
+     function delete_photo(v_id)
+        {     
+        //if (confirm("Удалить изображение?")) {
+            $.ajax({
+                    type: "POST",
+                    url: "IAS$DB.NEW_STUD_PERSONAL.PLUPLOAD_STUD_SCRIPT",
+                    data: "p_stud_id=346231&p_id="+v_id+"",
+                    success: function(html) {
+                                              //window.location.reload(true);
+                                              document.location.href="new_stud_personal.stud_anketa?p_type=11";
+                                              //$.fancybox.close();
+                                              //$("#gallery_photo").empty();
+                                              //$("#gallery_photo").append(html);
+                                            }
+                  });
+            //} 
+        } 
+       function deleteLang(v_id)
+        {     
+          if (confirm("Удалить запись?")) {
+            $.ajax({
+                    type: "POST",
+                    url: "IAS$DB.NEW_STUD_PERSONAL.StudLanguageScript",
+                    data: "p_cod=346231&p_language_cod="+v_id+"&p_type=native_d",
+                    success: function(html) {
+                                              window.location.reload(true);
+                                            }
+                  });
+           } 
+        }    
+       function terms_use(v_type,v_value)
+        {     
+        $.ajax({
+                type: "POST",
+                url: "IAS$DB.NEW_STUD_PERSONAL.PUB_STATUS",
+                data: "p_stud_id=346231&p_value="+v_value+"&p_type="+v_type+"",
+                success: function(html) {
+                                           $("#content").append(html);
+                                        }
+              })
+        } 
+        function delete_rec(v_id,v_type) {
+                 document.location.href="new_stud_personal.update_inline?p_stud_id=346231&p_file_id="+v_id+"&p_type=photo";
+         };
+         </script>
+<script type="text/javascript">
+            $("#my-select-recomend").select2();
+            function formatRepo (repo) {
+                    if (repo.loading) return repo.text;
+
+                    var markup = '<div class="clearfix">' +
+                    '<div clas="col-sm-10">' +
+                    '<div class="clearfix">' +
+                    '<div class="col-sm-6">' + repo.name + '</div>' +
+                    '</div>';
+                      markup += '</div></div>';
+                      return markup;
+            }
+
+             function formatRepoSelection (repo) {
+                      return repo.name || repo.text;
+             }
+           </script>
+<script src="https://shelly.kpfu.ru/pdf/supersite/bvi/js/js.cookie.js"></script>
+          <script src="https://shelly.kpfu.ru/pdf/supersite/bvi/js/bvi-init.js"></script>
+<script>
+
+
+(function(a){a.bvi=function(h){var k=a.extend({bvi_target:".bvi-open",bvi_theme:"white",bvi_font:"arial",bvi_font_size:16,bvi_letter_spacing:"normal",bvi_line_height:"normal",bvi_images:true,bvi_reload:false,bvi_fixed:true,bvi_tts:true,bvi_flash_iframe:true,bvi_hide:false},h);var J=z();var y=k.bvi_target;var d;var F;var A;var i;var o;var p;var q;var b;var E;var C;var g;var c=window.speechSynthesis;var H=(c!==undefined)?true:false;var B="576";var G="768";var w="992";var t="1200";var x=(window.innerWidth>0)?window.innerWidth:screen.width;console.log("Bvi console: ready Button visually impaired v2.0");if(H){setInterval(function(){if(c.speaking==false){a(".bvi-tts-play").removeClass("disabled");a(".bvi-tts-pause").addClass("disabled");a(".bvi-tts-resume").addClass("disabled");a(".bvi-tts-stop").addClass("disabled")}},1000);console.log("Bvi console: Чтение речи поддерживается в данной браузере")}else{console.log("Bvi console: Чтение речи не поддерживается в данном браузере")}a(window).on("resize",function(){var K=(window.innerWidth>0)?window.innerWidth:screen.width;if(K>=w){a(".bvi-panel-container").show()}if(K<=w){a(".bvi-panel-container").removeClass("bvi-container").addClass("bvi-container-fluid")}else{a(".bvi-panel-container").removeClass("bvi-container-fluid").addClass("bvi-container")}});function z(){var M=window.navigator.userAgent;var L=M.indexOf("MSIE ");if(L>0){return parseInt(M.substring(L+5,M.indexOf(".",L)),10)}var K=M.indexOf("Trident/");if(K>0){var O=M.indexOf("rv:");return parseInt(M.substring(O+3,M.indexOf(".",O)),10)}var N=M.indexOf("Edge/");if(N>0){return parseInt(M.substring(N+5,M.indexOf(".",N)),10)}return false}function n(P){if(Cookies.get("bvi-tts")==="true"&&H){c.cancel();var L=c.getVoices();var N=120;var K=new RegExp("^[\\s\\S]{"+Math.floor(N/2)+","+N+"}[.!?,]{1}|^[\\s\\S]{1,"+N+"}$|^[\\s\\S]{1,"+N+"} ");var O=[];var M=P;while(M.length>0){O.push(M.match(K)[0]);M=M.substring(O[O.length-1].length)}a.each(O,function(){var R=new SpeechSynthesisUtterance(this.trim());R.volume=1;R.rate=1;R.pitch=1;R.lang="ru-RU";R.onstart=function(S){console.log(R)};R.onend=function(S){};R.onpause=function(S){};R.onresume=function(S){};R.onboundary=function(S){};for(var Q=0;Q<L.length;Q++){if(L[Q].lang==="ru-RU"&&L[Q].voiceURI==="Google русский"){R.voice=L[Q];R.voiceURI=L[Q].voiceURI}else{if(L[Q].lang==="ru-RU"&&L[Q].voiceURI==="Microsoft Irina Desktop - Russian"){R.voice=L[Q];R.voiceURI=L[Q].voiceURI}else{if(L[Q].lang==="ru-RU"&&L[Q].voiceURI==="urn:moz-tts:sapi:Microsoft Irina Desktop - Russian?ru-RU"){R.voice=L[Q];R.voiceURI=L[Q].voiceURI}else{if(L[Q].lang==="ru-RU"&&L[Q].voiceURI==="com.apple.speech.synthesis.voice.yuri"){R.voice=L[Q];R.voiceURI=L[Q].voiceURI}}}}}c.speak(R)})}}function f(M,N){M=String(M);N=Number(N)>>>0;var L=M.slice(0,N+1).search(/\S+$/),K=M.slice(N).search(/\s/);if(K<0){return M.slice(L)}return M.slice(L,K+N)}function m(){var K;var L=a(".bvi-tts");a(".bvi-tts-link").remove();a(".bvi-tts-text").contents().unwrap();if(Cookies.get("bvi-tts")==="true"&&H){L.each(function(M){K="bvi-tts-text-id-"+M;a(this).wrapInner('<div class="bvi-tts-text '+K+'"></div>');a(this).prepend('<div class="bvi-tts-link bvi-tts-link-id-'+M+'" data-bvi-tts-class-text=".'+K+'" data-bvi-tts-link-id=".bvi-tts-link-id-'+M+'">\n    <a href="#" class="bvi-tts-play bvi-link">Воспроизвести</a>\n    <a href="#" class="bvi-tts-pause bvi-link disabled">Пауза</i></a>\n    <a href="#" class="bvi-tts-resume bvi-link disabled">Продолжить</i></a>\n    <a href="#" class="bvi-tts-stop bvi-link disabled">Стоп</i></a>\n</div>')});a(".bvi-tts-link").show();a(".bvi-tts-play").click(function(){c.cancel();var M=a(this).parent().data("bvi-tts-class-text");var O=a(this).parent().data("bvi-tts-link-id");var N=a(M).text();n(N);a(".bvi-tts-play").removeClass("disabled");a(".bvi-tts-pause").addClass("disabled");a(".bvi-tts-resume").addClass("disabled");a(".bvi-tts-stop").addClass("disabled");a(O+" .bvi-tts-play").addClass("disabled");a(O+" .bvi-tts-pause").removeClass("disabled");a(O+" .bvi-tts-stop").removeClass("disabled");return false});a(".bvi-tts-resume").click(function(){var M=a(this).parent().data("bvi-tts-link-id");a(M+" .bvi-tts-pause").removeClass("disabled");a(this).addClass("disabled");c.resume();return false});a(".bvi-tts-pause").click(function(){var M=a(this).parent().data("bvi-tts-link-id");a(M+" .bvi-tts-resume").removeClass("disabled");a(this).addClass("disabled");c.pause();return false});a(".bvi-tts-stop").click(function(){c.cancel();var M=a(this).parent().data("bvi-tts-link-id");a(this).addClass("disabled");a(M+" .bvi-tts-play").removeClass("disabled");a(M+" .bvi-tts-pause").addClass("disabled");a(M+" .bvi-tts-resume").addClass("disabled");return false})}else{a(".bvi-tts-link").remove();a(".bvi-tts-text").contents().unwrap()}}function v(){a("#bvi-panel-close, .bvi-panel-close, #bvi-toggler-close").click(function(){n("Обычная версия сайта");if(Cookies.get("bvi-reload")==="true"){document.location.reload(true)}a(".bvi-body *").each(function(){var N=a(this);var K=N.css("background-image");var L=K.replace(/.*\s?url\([\'\"]?/,"").replace(/[\'\"]?\).*/,"");if(L!="none"){if(J==11||J==10||J==9){var M=N.attr("data-bvi-background-image-original")||L;N.css("background-image","url("+M+")");N.removeClass("bvi-background-image")}}});a("img").each(function(){a(this).show();a("div.bvi-img").remove();a(this).removeClass("bvi-background-image");if(J==11||J==10||J==9){var K=a(this).attr("data-bvi-img-original")||this.src;this.src=K}});Cookies.remove("bvi-panel-active",{path:"/"});Cookies.remove("bvi-font-size",{path:"/"});Cookies.remove("bvi-theme",{path:"/"});Cookies.remove("bvi-images",{path:"/"});Cookies.remove("bvi-line-height",{path:"/"});Cookies.remove("bvi-letter-spacing",{path:"/"});Cookies.remove("bvi-tts",{path:"/"});Cookies.remove("bvi-font-family",{path:"/"});Cookies.remove("bvi-panel-hide",{path:"/"});Cookies.remove("bvi-flash-iframe",{path:"/"});Cookies.remove("bvi-reload",{path:"/"});l();return false});a("#bvi-panel-hide, #bvi-toggler-menu-hide").click(function(){a(".bvi-panel").toggle(0);a(".bvi-link-top").toggle(0);s("data-bvi-panel-hide","bvi-panel-hide",true);n("Панель скрыта");return false});a("#bvi-panel-show").click(function(){a(".bvi-panel").toggle(0);a(".bvi-link-top").toggle(0);s("data-bvi-panel-hide","bvi-panel-hide",false);n("Панель открыта");return false});a("#bvi-setting").click(function(){a(".bvi-setting-menu").toggle(0);a(this).toggleClass("active");n("Дополнительные настройки");return false});a("#bvi-toggler").click(function(){a(".bvi-panel-container").toggle(0);a(this).toggleClass("active");n("Меню");return false});a("#bvi-setting-close").click(function(){a(".bvi-setting-menu").toggle(0);a("#bvi-setting").toggleClass("active");n("Дополнительные настройки закрыты");return false});a("#bvi-font-size-less").click(function(){var K=parseFloat(Cookies.get("bvi-font-size"))-1;a(this).addClass("active").siblings().removeClass("active");a("#bvi-font-size").text(K);if(K!=0){s("data-bvi-size","bvi-font-size",K);n("Размер шрифта уменьшен")}return false});a("#bvi-font-size-more").click(function(){var K=parseFloat(Cookies.get("bvi-font-size"))+1;a(this).addClass("active").siblings().removeClass("active");a("#bvi-font-size").text(K);if(K!=40){s("data-bvi-size","bvi-font-size",K);n("Размер шрифта увеличен")}return false});a("#bvi-theme-white").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-theme","bvi-theme","white");n("Цвет сайта черным по белому");return false});a("#bvi-theme-black").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-theme","bvi-theme","black");n("Цвет сайта белым по черному");return false});a("#bvi-theme-blue").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-theme","bvi-theme","blue");n("Цвет сайта тёмно-синим по голубому");return false});a("#bvi-theme-brown").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-theme","bvi-theme","brown");n("Цвет сайта коричневым по бежевому");return false});a("#bvi-theme-green").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-theme","bvi-theme","green");n("Цвет сайта зеленым по тёмно-коричневому");return false});a("#bvi-images-true").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-images","bvi-images",true);n("Изображения включены");return false});a("#bvi-images-false").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-images","bvi-images",false);n("Изображения выключены");return false});a("#bvi-images-grayscale").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-images","bvi-images","grayscale");n("Изображения чёрно-белые");return false});a("#bvi-line-height-normal").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-line-height","bvi-line-height","normal");n("Междустрочный интервал cтандартный");return false});a("#bvi-line-height-average").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-line-height","bvi-line-height","average");n("Междустрочный интервал средний");return false});a("#bvi-line-height-big").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-line-height","bvi-line-height","big");n("Междустрочный интервал большой");return false});a("#bvi-letter-spacing-normal").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-letter-spacing","bvi-letter-spacing","normal");n("Межбуквенный интервал одинарный");return false});a("#bvi-letter-spacing-average").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-letter-spacing","bvi-letter-spacing","average");n("Межбуквенный интервал полуторный");return false});a("#bvi-letter-spacing-big").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-letter-spacing","bvi-letter-spacing","big");n("Межбуквенный интервал двойной");return false});a("#bvi-font-family-arial").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-font-family","bvi-font-family","arial");n("Шрифт без засечек");return false});a("#bvi-font-family-times").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-font-family","bvi-font-family","times");n("Шрифт с засечками");return false});a("#bvi-flash-iframe-true").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-flash-iframe","bvi-flash-iframe",true);n("Включить встроенные элементы");return false});a("#bvi-flash-iframe-false").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-flash-iframe","bvi-flash-iframe",false);n("Выключить встроенные элементы");return false});a("#bvi-tts-true").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-tts","bvi-tts",true);n("Синтез речи включён");m();return false});a("#bvi-tts-false").click(function(){a(this).addClass("active").siblings().removeClass("active");s("data-bvi-tts","bvi-tts",false);n("Синтез речи выключён");m();return false});a("#bvi-settings-default").click(function(){a("#bvi-theme-"+Cookies.get("bvi-theme")).removeClass("active");a("#bvi-images-"+Cookies.get("bvi-images")).removeClass("active");a("#bvi-line-height-"+Cookies.get("bvi-line-height")).removeClass("active");a("#bvi-letter-spacing-"+Cookies.get("bvi-letter-spacing")).removeClass("active");a("#bvi-font-family-"+Cookies.get("bvi-font-family")).removeClass("active");a("#bvi-flash-iframe-"+Cookies.get("bvi-flash-iframe")).removeClass("active");a("#bvi-tts-"+Cookies.get("bvi-tts")).removeClass("active");a("#bvi-theme-"+k.bvi_theme).addClass("active");a("#bvi-images-"+k.bvi_images).addClass("active");a("#bvi-line-height-"+k.bvi_line_height).addClass("active");a("#bvi-letter-spacing-"+k.bvi_letter_spacing).addClass("active");a("#bvi-font-family-"+k.bvi_font).addClass("active");a("#bvi-flash-iframe-"+k.bvi_flash_iframe).addClass("active");a("#bvi-tts-"+k.bvi_tts).addClass("active");a("#bvi-font-size").text(k.bvi_font_size);s("data-bvi-size","bvi-font-size",k.bvi_font_size);s("data-bvi-theme","bvi-theme",k.bvi_theme);s("data-bvi-images","bvi-images",k.bvi_images);s("data-bvi-line-height","bvi-line-height",k.bvi_line_height);s("data-bvi-letter-spacing","bvi-letter-spacing",k.bvi_letter_spacing);s("data-bvi-font-family","bvi-font-family",k.bvi_font);s("data-bvi-flash-iframe","bvi-flash-iframe",k.bvi_flash_iframe);s("data-bvi-tts","bvi-tts",k.bvi_tts);n("Настройки по умолчанию");m();return false})}function s(M,K,L){Cookies.set(K,L,{path:"/",expires:1});a(".bvi-body").attr(M,Cookies.get(K));e()}function I(){a("#bvi-theme-"+Cookies.get("bvi-theme")).addClass("active");a("#bvi-images-"+Cookies.get("bvi-images")).addClass("active");a("#bvi-line-height-"+Cookies.get("bvi-line-height")).addClass("active");a("#bvi-letter-spacing-"+Cookies.get("bvi-letter-spacing")).addClass("active");a("#bvi-font-family-"+Cookies.get("bvi-font-family")).addClass("active");a("#bvi-flash-iframe-"+Cookies.get("bvi-flash-iframe")).addClass("active");a("#bvi-tts-"+Cookies.get("bvi-tts")).addClass("active")}function D(){if(typeof Cookies.get("bvi-font-size")==="undefined"||typeof Cookies.get("bvi-theme")==="undefined"||typeof Cookies.get("bvi-images")==="undefined"||typeof Cookies.get("bvi-line-height")==="undefined"||typeof Cookies.get("bvi-letter-spacing")==="undefined"||typeof Cookies.get("bvi-tts")==="undefined"||typeof Cookies.get("bvi-font-family")==="undefined"||typeof Cookies.get("bvi-panel-hide")==="undefined"||typeof Cookies.get("bvi-flash-iframe")==="undefined"||typeof Cookies.get("bvi-reload")==="undefined"||typeof Cookies.get("bvi-fixed")==="undefined"){Cookies.set("bvi-font-size",k.bvi_font_size,{path:"/",expires:1});Cookies.set("bvi-theme",k.bvi_theme,{path:"/",expires:1});Cookies.set("bvi-images",k.bvi_images,{path:"/",expires:1});Cookies.set("bvi-line-height",k.bvi_line_height,{path:"/",expires:1});Cookies.set("bvi-letter-spacing",k.bvi_letter_spacing,{path:"/",expires:1});Cookies.set("bvi-tts",k.bvi_tts,{path:"/",expires:1});Cookies.set("bvi-font-family",k.bvi_font,{path:"/",expires:1});Cookies.set("bvi-panel-hide",k.bvi_hide,{path:"/",expires:1});Cookies.set("bvi-flash-iframe",k.bvi_flash_iframe,{path:"/",expires:1});Cookies.set("bvi-reload",k.bvi_reload,{path:"/",expires:1});Cookies.set("bvi-fixed",k.bvi_fixed,{path:"/",expires:1})}a(".bvi-body").attr({"data-bvi-panel-hide":Cookies.get("bvi-panel-hide"),"data-bvi-size":Cookies.get("bvi-font-size"),"data-bvi-theme":Cookies.get("bvi-theme"),"data-bvi-images":Cookies.get("bvi-images"),"data-bvi-line-height":Cookies.get("bvi-line-height"),"data-bvi-letter-spacing":Cookies.get("bvi-letter-spacing"),"data-bvi-font-family":Cookies.get("bvi-font-family"),"data-bvi-flash-iframe":Cookies.get("bvi-flash-iframe"),"data-bvi-reload":Cookies.get("bvi-reload"),"data-bvi-tts":Cookies.get("bvi-tts"),"data-bvi-fixed":Cookies.get("bvi-fixed")});a("#bvi-font-size").text(Cookies.get("bvi-font-size"));var K=Cookies.get("bvi-panel-hide");if(K==="false"||typeof K==="undefined"){a(".bvi-panel").show();a(".bvi-link-top").hide()}else{a(".bvi-panel").hide();a(".bvi-link-top").show("slow")}}function e(){var K=Cookies.get("bvi-images");a(".bvi-body *").each(function(){var N=a(this);var L=N.css("background-image");var M=L.replace(/^url\(['"]?/,"").replace(/['"]?\)$/,"");if(M!="none"){a(this).addClass("bvi-background-image")}});a("img").each(function(){a(this).addClass("bvi-img")});if(K==="true"){a("img").each(function(){a(this).show();a("div.bvi-img").remove();if(J==11||J==10||J==9){var L=a(this).attr("data-bvi-img-original")||this.src;this.src=L}});a(".bvi-body *").each(function(){var P=a(this);var L=P.css("background-image");var N=L.replace(/^url\(['"]?/,"").replace(/['"]?\)$/,"");if(N!="none"){if(J==11||J==10||J==9){var M="^(https?|http)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]";if(N.match(M)){var O=P.attr("data-bvi-background-image-original")||N;P.css("background-image","url("+O+")")}}}})}if(K==="false"){a("div.bvi-img").remove();a("img").each(function(){a(this).hide();var N=this.alt||"Изображение";var M=a(this).attr("class")||"bvi-class-none";var L=a(this).attr("id")||"bvi-id-none";a(this).after(a('<div class="'+M+'" id="'+L+'" style="width: '+a(this).get(0).naturalWidth+'px; height: 100%;">').html(N))})}if(K==="grayscale"){a("img").each(function(){a(this).show();a("div.bvi-img").remove();if(J==11||J==10||J==9){a(this).attr("data-bvi-img-original",this.src);if(location.hostname===j(this.src)){var L=u(this.src);this.src=L}else{return false}}});a(".bvi-body *").each(function(){var P=a(this);var M=P.css("background-image");var O=M.replace(/^url\(['"]?/,"").replace(/['"]?\)$/,"");if(O!="none"){if(J==11||J==10||J==9){var N="^(https?|http)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]";if(O.match(N)){var L=u(O);P.attr("data-bvi-background-image-original",O);P.css("background-image","url("+L+") !important")}}}})}}function j(L){var K;if(L.indexOf("//")>-1){K=L.split("/")[2]}else{K=L.split("/")[0]}K=K.split(":")[0];K=K.split("?")[0];return K}function u(K){var M=document.createElement("canvas");var S=M.getContext("2d");var N=new Image();N.src=K;M.width=N.naturalWidth||N.offsetWidth||N.width;M.height=N.naturalHeight||N.offsetHeight||N.height;S.drawImage(N,0,0);var L=S.getImageData(0,0,M.width,M.height);for(var Q=0;Q<L.height;Q++){for(var R=0;R<L.width;R++){var O=(Q*4)*L.width+R*4;var P=(L.data[O]+L.data[O+1]+L.data[O+2])/3;L.data[O]=P;L.data[O+1]=P;L.data[O+2]=P}}S.putImageData(L,0,0,0,0,L.width,L.height);return M.toDataURL()}function l(){if(J==8||J==7||J==6||J==5){console.log("Bvi console: Браузер не поддерживается.");alert(confirm("Браузер не поддерживается."))}else{if(Cookies.get("bvi-panel-active")==="true"){a(y).addClass("bvi-hide").after(a('<a href="#" class="bvi-panel-close" title="Обычная версия сайта">Обычная версия сайта</a>'));r();m();v();I();if(H===false){Cookies.set("bvi-tts",false,{path:"/",expires:1});a("#bvi-tts-true").remove();a("#bvi-tts-false").remove()}}else{m();a(y).removeClass("bvi-hide");a(".bvi-panel-close").remove();a(".bvi-panel").remove();a(".bvi-link-top").remove();a("body > .bvi-body").contents().unwrap();a(".bvi-tts-link").remove();a(".bvi-tts-text").contents().unwrap()}}}function r(){a("head").append('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">');a("body").wrapInner('<div class="bvi-body"></div>');a("body").prepend('<div class="bvi-panel">\n    <div class="bvi-container-fluid">\n        <div class="bvi-row bvi-no-gutters">\n            <div class="bvi-col-12">\n                <div class="bvi-panel-toggler">\n                    <a href="#" id="bvi-toggler" class="bvi-link" title="Меню">Меню</a>\n                    <a href="#" id="bvi-toggler-close" class="bvi-link" title="Обычная версия сайта">Обычная версия сайта</a>\n                    <a href="#" id="bvi-toggler-menu-hide" class="bvi-link" title="Скрыть панель"><i class="bvi-images bvi-images-minus-square-o "></i></a>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class="bvi-panel-container bvi-container">\n        <div class="bvi-row bvi-no-gutters">\n            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-3 bvi-text-center">\n                <div class="bvi-title">Размер шрифта <span id="bvi-font-size"></span> px</div>\n                <a href="#" id="bvi-font-size-less" class="bvi-link" title="Уменьшить размер шрифта">A -</a>\n                <a href="#" id="bvi-font-size-more" class="bvi-link" title="Увеличить размер шрифта">A +</a>\n            </div>\n            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-3 bvi-text-center">\n                <div class="bvi-title">Цвета сайта</div>\n                <a href="#" id="bvi-theme-white" class="bvi-link bvi-link-white " title="Черным по белому">Ц</a>\n                <a href="#" id="bvi-theme-black" class="bvi-link bvi-link-black" title="Белым по черному">Ц</a>\n                <a href="#" id="bvi-theme-blue" class="bvi-link bvi-link-blue" title="Темно-синим по голубому">Ц</a>\n                <a href="#" id="bvi-theme-brown" class="bvi-link bvi-link-brown" title="Коричневым по бежевому">Ц</a>\n                <a href="#" id="bvi-theme-green" class="bvi-link bvi-link-green" title="Зеленым по темно-коричневому">Ц</a>\n            </div>\n            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-2 bvi-text-center">\n                <div class="bvi-title">Изображения</div>\n                <a href="#" id="bvi-images-true" class="bvi-link" title="Изображения включены"><i class="bvi-images bvi-images-on"></i></a>\n                <a href="#" id="bvi-images-false" class="bvi-link" title="Изображения выключены"><i class="bvi-images bvi-images-off"></i></a>\n                <a href="#" id="bvi-images-grayscale" class="bvi-link" title="Изображения черно-белые"><i class="bvi-images bvi-images-adjust"></i></a>\n            </div>\n            <div class="bvi-col-6 bvi-col-sm-6 bvi-col-md-3 bvi-col-lg-3 bvi-col-xl-4 bvi-text-center">\n                <div class="bvi-title">Дополнительно</div>\n                <a href="#" id="bvi-tts-true" class="bvi-link" title=""><i class="bvi-images bvi-images-volume-on"></i></a>\n                <a href="#" id="bvi-tts-false" class="bvi-link"><i class="bvi-images bvi-images-volume-off"></i></a>\n                <a href="#" id="bvi-setting" class="bvi-link" title="Настройки">Настройки</a>\n                <a href="#" id="bvi-panel-close" class="bvi-link" title="Обычная версия сайта"><i class="bvi-images bvi-images-eye-slash"></i></a>\n                <a href="#" id="bvi-panel-hide" class="bvi-link" title="Скрыть панель"><i class="bvi-images bvi-images-minus-square-o"></i></a>\n            </div>\n        </div>\n        <div class="bvi-setting-menu bvi-hide-lg">\n            <div class="bvi-row bvi-no-gutters">\n                <div class="bvi-col-sm-12 bvi-col-md-6 bvi-col-lg-4 bvi-col-xl-4 bvi-text-center">\n                    <div class="bvi-title">Междустрочный интервал</div>\n                    <a href="#" id="bvi-line-height-normal" class="bvi-link" title="Междустрочный интервал стандартный">Стандартный</a>\n                    <a href="#" id="bvi-line-height-average" class="bvi-link" title="Междустрочный интервал средний">Средний</a>\n                    <a href="#" id="bvi-line-height-big" class="bvi-link" title="Междустрочный интервал большой">Большой</a>\n                </div>\n                <div class="bvi-col-sm-12 bvi-col-md-6 bvi-col-lg-5 bvi-col-xl-5 bvi-text-center">\n                    <div class="bvi-title">Межбуквенный интервал</div>\n                    <a href="#" id="bvi-letter-spacing-normal" class="bvi-link" title="Межбуквенный интервал одинарный">Одинарный</a>\n                    <a href="#" id="bvi-letter-spacing-average" class="bvi-link"\n                       title="Межбуквенный интервал полуторный">Полуторный</a>\n                    <a href="#" id="bvi-letter-spacing-big" class="bvi-link" title="Межбуквенный интервал двойной">Двойной</a>\n                </div>\n                <div class="bvi-col-sm-12 bvi-col-md-6 bvi-col-lg-3 bvi-col-xl-3 bvi-text-center">\n                    <div class="bvi-title">Шрифт</div>\n                    <a href="#" id="bvi-font-family-arial" class="bvi-link" title="Шрифт без засечек">Без засечек</a>\n                    <a href="#" id="bvi-font-family-times" class="bvi-link" title="Шрифт с засечками">С засечками</a>\n                </div>\n                <div class="bvi-col-sm-12 bvi-col-md-6 bvi-col-lg-6 bvi-col-xl-6 bvi-text-center">\n                    <div class="bvi-title">Встроенные элементы (Видео, карты и тд.)</div>\n                    <a href="#" id="bvi-flash-iframe-true" class="bvi-link" title="Включить">Включить</a>\n                    <a href="#" id="bvi-flash-iframe-false" class="bvi-link" title="Выключить">Выключить</a>\n                </div>\n                <div class="bvi-col-sm-12 bvi-col-md-12 bvi-col-lg-6 bvi-col-xl-6 bvi-text-right">\n                    <div class="bvi-title">&nbsp;</div>\n                    <a href="#" id="bvi-settings-default" class="bvi-link" title="Вернуть стандартные настройки">Настройки\n                        по умолчанию</a>\n                    <a href="#" id="bvi-setting-close" class="bvi-link" title="Закрыть панель">Закрыть панель</a>\n                </div>\n            </div>\n            <div class="bvi-row bvi-mt">\n                <div class="bvi-col-12 bvi-text-center">\n                    <a href="http://bvi.isvek.ru/" class="bvi-link-copy" target="_blank" title="bvi.isvek.ru v2.0">bvi.isvek.ru</a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<a href="#" id="bvi-panel-show" class="bvi-link bvi-link-top"><i class="bvi-images bvi-images-eye"></i></a>');if(x>=w){a(".bvi-panel-container").show()}if(x<=w){a(".bvi-panel-container").removeClass("bvi-container").addClass("bvi-container-fluid")}else{a(".bvi-panel-container").removeClass("bvi-container-fluid").addClass("bvi-container")}var K=(window.pageYOffset!==undefined)?window.pageYOffset:(document.documentElement||document.body.parentNode||document.body).scrollTop;if(K>99){if(Cookies.get("bvi-fixed")=="true"){a(".bvi-panel").addClass("bvi-fixed-top")}}a(window).scroll(function(){if(a(this).scrollTop()>=99){if(Cookies.get("bvi-fixed")=="true"){a(".bvi-panel").addClass("bvi-fixed-top")}}else{a(".bvi-panel").removeClass("bvi-fixed-top")}});D();e()}if(k.bvi_theme=="white"||k.bvi_theme=="black"||k.bvi_theme=="blue"||k.bvi_theme=="brown"||k.bvi_theme=="green"){d=true}else{d=false;g=["bvi_theme"]}if(k.bvi_font=="times"||k.bvi_font=="arial"){F=true}else{F=false;g=["bvi_font"]}if(k.bvi_letter_spacing=="normal"||k.bvi_letter_spacing=="average"||k.bvi_letter_spacing=="big"){A=true}else{A=false;g=["bvi_letter_spacing"]}if(k.bvi_line_height=="normal"||k.bvi_line_height=="average"||k.bvi_line_height=="big"){i=true}else{i=false;g=["bvi_line_height"]}if(k.bvi_font_size==0){o=false;g=["bvi_font_size"]}else{if(k.bvi_font_size<=40){o=true}else{o=false;g=["bvi_font_size"]}}if(k.bvi_images===false||k.bvi_images===true||k.bvi_images==="grayscale"){p=true}else{p=false;g=["bvi_images"]}if(k.bvi_fixed===false||k.bvi_fixed===true){q=true}else{q=false;g=["bvi_fixed"]}if(k.bvi_tts===false||k.bvi_tts===true){b=true}else{b=false;g=["bvi_tts"]}if(k.bvi_flash_iframe===false||k.bvi_flash_iframe===true){E=true}else{E=false;g=["bvi_flash_iframe"]}if(k.bvi_hide===false||k.bvi_hide===true){C=true}else{C=false;g=["bvi_hide"]}if(d===true&&F===true&&A===true&&i===true&&o===true&&p===true&&q===true&&E===true&&b===true&&C===true){if(a(y).length){a(y).click(function(){Cookies.set("bvi-panel-active",true,{path:"/",expires:1});l();n("Версия сайта для слабовидящих");return false})}else{console.log("Bvi console: Неправильный параметр - [bvi_target]")}l()}else{console.log("Bvi console: Неправильный параметр - ["+g+"]")}}})(jQuery);
+
+</script>
+
+
+<div id="mm-blocker" class="mm-slideout"></div></body></html>
